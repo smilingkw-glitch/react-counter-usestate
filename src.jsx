@@ -1,4 +1,5 @@
-import { useState } from "react";
+import React, { useState } from "react";
+import ReactDOM from "react-dom/client";
 
 function Counter() {
   const [count, setCount] = useState(0);
@@ -15,4 +16,13 @@ function Counter() {
   );
 }
 
-export default Counter;
+function App() {
+  return (
+    <div>
+      <h2>Counter App</h2>
+      <Counter />
+    </div>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById("root")).render(<App />);
